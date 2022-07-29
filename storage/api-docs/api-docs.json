@@ -1,0 +1,60 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Radimart ecommerce Image CDN",
+        "version": "1.0"
+    },
+    "paths": {
+        "/radimart-media/uploader": {
+            "post": {
+                "tags": [
+                    "image"
+                ],
+                "summary": "Image Upload",
+                "operationId": "ce9d5146f5cf87b3fbd21b0d9609c119",
+                "parameters": [
+                    {
+                        "name": "accept",
+                        "in": "header",
+                        "description": "test",
+                        "schema": {
+                            "type": "string",
+                            "default": "multipart/form-data"
+                        }
+                    },
+                    {
+                        "name": "imageType",
+                        "in": "header",
+                        "description": "test",
+                        "schema": {
+                            "type": "string",
+                            "default": "product"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "image": {
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
